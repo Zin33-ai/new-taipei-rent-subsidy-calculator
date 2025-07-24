@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吉翔社宅常見問題</title>
+    <style>
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #FF6B6B, #4ECDC4);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        
+        .header p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .nav-tabs {
+            display: flex;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .nav-tab {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            background: #f8f9fa;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #495057;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-tab.active {
+            background: white;
+            color: #4ECDC4;
+            border-bottom: 3px solid #4ECDC4;
+        }
+        
+        .nav-tab:hover {
+            background: #e9ecef;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 30px;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .step-section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: #f8f9ff;
+            border-radius: 15px;
+            border-left: 5px solid #4ECDC4;
+        }
+        
+        .step-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .step-number {
+            background: #4ECDC4;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        
+        .definition-box {
+            background: #e8f4f8;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #3498db;
+        }
+        
+        .definition-title {
+            font-weight: bold;
+            color: #2980b9;
+            margin-bottom: 10px;
+        }
+        
+        .level-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .level-table th {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .level-table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .level-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .level-1 { background-color: #ffebee !important; }
+        .level-2 { background-color: #f3e5f5 !important; }
+        .level-3 { background-color: #e8f5e8 !important; }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ffeaa7;
+            margin: 15px 0;
+        }
+        
+        .location-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 1em;
+        }
+        
+        .location-table th {
+            background: #34495e;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .location-table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        
+        .city-name {
+            font-weight: bold;
+            background: #ecf0f1;
+        }
+        
+        .example-box {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        
+        .example-title {
+            font-weight: bold;
+            color: #155724;
+            margin-bottom: 10px;
+        }
+        
+        .bonus-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .bonus-table th {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        
+        .bonus-table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+            font-size: 0.9em;
+        }
+        
+        .faq-section {
+            margin-bottom: 30px;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            background: linear-gradient(135deg, #4ECDC4, #44A08D);
+            color: white;
+            padding: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: linear-gradient(135deg, #44A08D, #4ECDC4);
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5em;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-question.active::after {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+        }
+        
+        .faq-answer.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        .faq-answer ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .faq-answer li {
+            margin-bottom: 5px;
+        }
+        
+        .contact-info {
+            background: #2c3e50;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            margin-top: 30px;
+            border-radius: 15px;
+        }
+        
+        .contact-info h3 {
+            margin-top: 0;
+            color: #4ECDC4;
+        }
+        
+        .important-note {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .calculator-form {
+            background: #f8f9ff;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-label {
+            display: block;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #4ECDC4;
+            box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.1);
+        }
+        
+        .form-select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 1em;
+            background: white;
+            cursor: pointer;
+        }
+        
+        .form-select:focus {
+            outline: none;
+            border-color: #4ECDC4;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: 2px solid #e9ecef;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .checkbox-item:hover {
+            border-color: #4ECDC4;
+        }
+        
+        .checkbox-item input[type="checkbox"] {
+            margin-right: 8px;
+            transform: scale(1.2);
+        }
+        
+        .checkbox-item.checked {
+            background: #e8f4f8;
+            border-color: #4ECDC4;
+        }
+        
+        .calculate-btn {
+            background: linear-gradient(135deg, #4ECDC4, #44A08D);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .calculate-btn:hover {
+            background: linear-gradient(135deg, #44A08D, #4ECDC4);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
+        }
+        
+        .result-section {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 30px;
+            display: none;
+        }
+        
+        .result-section.show {
+            display: block;
+            animation: slideDown 0.5s ease;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .result-title {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        
+        .result-amount {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .result-details {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: left;
+        }
+        
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .disclaimer {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .disclaimer h4 {
+            color: #856404;
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+        
+        .price-highlight {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .checkbox-group {
+                flex-direction: column;
+            }
+            
+            .result-amount {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>吉翔社宅常見問題</h1>
+            <p>快速了解您的租金補貼金額與申請資格</p>
+        </div>
+        
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="showTab('faq')">❓ 常見問題</button>
+            <button class="nav-tab" onclick="showTab('subsidy')">💰 補貼金額查詢</button>
+            <button class="nav-tab" onclick="showTab('calculator')">🧮 補貼試算器</button>  
+        </div>
+        
+        <div id="calculator" class="tab-content active">
+            <div class="disclaimer">
+                <h4>⚠️ 重要聲明</h4>
+                <p>本試算器僅供參考，實際補貼結果依照政府審查通過的補助金額為主</p>
+                <p>詳細申請條件與審查標準請洽詢相關單位</p>
+            </div>
+            
+            <div class="calculator-form">
+                <h2 style="text-align: center; color: #2c3e50; margin-bottom: 30px;">🧮 租金補貼試算器</h2>
+                
+                <div class="form-group">
+                    <label class="form-label">租屋所在行政區 *</label>
+                    <select class="form-select" id="district" required>
+                        <option value="">請選擇行政區</option>
+                        <option value="group1">三重、土城、中和、永和、汐止、板橋、新店、新莊、蘆洲、八里、三峽、五股、林口、泰山、淡水、深坑、樹林、鶯歌區</option>
+                        <option value="group2">三芝、平溪、石門、石碇、坪林、金山、烏來、貢寮、瑞芳、萬里、雙溪區</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">家庭成員人數 *</label>
+                    <input type="number" class="form-input" id="familySize" min="1" max="10" placeholder="請輸入家庭成員總人數" required>
+                    <small style="color: #666; margin-top: 5px; display: block;">
+                        包含：申請人、配偶、未成年子女、懷孕中胎兒、受監護人
+                    </small>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">申請人年齡 *</label>
+                    <input type="number" class="form-input" id="applicantAge" min="18" max="100" placeholder="請輸入申請人年齡" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">經濟弱勢身分</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item" onclick="toggleCheckbox(this)">
+                            <input type="checkbox" id="lowIncome">
+                            低收入戶
+                        </label>
+                        <label class="checkbox-item" onclick="toggleCheckbox(this)">
+                            <input type="checkbox" id="midLowIncome">
+                            中低收入戶
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">社會弱勢身分</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item" onclick="toggleCheckbox(this)">
+                            <input type="checkbox" id="specialFamily">
+                            特殊境遇家庭
+                        </label>
+                        <label class="checkbox-item" onclick="toggleCheckbox(this)">
+                            <input type="checkbox" id="elderly">
+                            65歲以上老人
+                        </label>
+                        <label class="checkbox-item" onclick="toggleCheckbox(this)">
+                            <input type="checkbox" id="disabled">
+                            身心障礙者
+                        </label>
+                        <label class="checkbox-item" onclick="toggleCheckbox(this)">
+                            <input type="checkbox" id="indigenous">
+                            原住民
+                        </label>
+                        <label class="checkbox-item" onclick="toggleCheckbox(this)">
+                            <input type="checkbox" id="domestic violence">
+                            家暴/性侵受害者
+                        </label>
+                        <label class="checkbox-item" onclick="toggleCheckbox(this)">
+                            <input type="checkbox" id="other">
+                            其他社會弱勢
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">加碼身分</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item" onclick="toggleCheckbox(this)">
+                            <input type="checkbox" id="singleYouth">
+                            單身青年（成年未達40歲單身）
+                        </label>
+                        <label class="checkbox-item" onclick="toggleCheckbox(this)">
+                            <input type="checkbox" id="newMarried">
+                            新婚家庭（結婚2年內）
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">未成年子女人數</label>
+                    <input type="number" class="form-input" id="childrenCount" min="0" max="10" placeholder="請輸入未成年子女人數（含胎兒）" value="0">
+                </div>
+                
+                <button class="calculate-btn" onclick="calculateSubsidy()">
+                    🧮 開始試算
+                </button>
+            </div>
+            
+            <div id="result" class="result-section">
+                <div class="result-title">您的預估租金補貼金額</div>
+                <div class="result-amount" id="resultAmount">0 元</div>
+                <div class="result-details">
+                    <div class="result-item">
+                        <span>補貼級距：</span>
+                        <span id="resultLevel">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span>基本金額：</span>
+                        <span id="resultBase">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span>加碼倍數：</span>
+                        <span id="resultMultiplier">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span>加碼原因：</span>
+                        <span id="resultReason">-</span>
+                    </div>
+                </div>
+                
+                <div class="disclaimer" style="margin-top: 20px; background: #fff3cd; color: #856404;">
+                    <h4 style="color: #856404;">📋 注意事項</h4>
+                    <p style="color: #856404;">此為預估金額，實際補貼金額需經政府審查核定</p>
+                    <p style="color: #856404;">申請前請確認符合所有申請條件</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="subsidy" class="tab-content">
+            <div class="step-section">
+                <div class="step-title">
+                    <div class="step-number">1</div>
+                    確認家庭成員人數
+                </div>
+                
+                <div class="definition-box">
+                    <div class="definition-title">📋 家庭成員包括：</div>
+                    <ul>
+                        <li>申請人</li>
+                        <li>申請人之配偶</li>
+                        <li>申請人之未成年子女</li>
+                        <li>申請人配偶之未成年子女</li>
+                        <li>申請人或其配偶懷孕中之胎兒</li>
+                        <li>受申請人或其配偶監護之人</li>
+                    </ul>
+                </div>
+                
+                <div class="highlight">
+                    <strong>重要：</strong>年齡計算以「申請日」為準。例如申請日為114/8/2，生日為74/8/5，則未滿40歲（再3天就滿40歲也算未滿）
+                </div>
+            </div>
+            
+            <div class="step-section">
+                <div class="step-title">
+                    <div class="step-number">2</div>
+                    確認身分類別
+                </div>
+                
+                <div class="definition-box">
+                    <div class="definition-title">💰 經濟弱勢身分：</div>
+                    <ul>
+                        <li>低收入戶</li>
+                        <li>中低收入戶</li>
+                    </ul>
+                </div>
+                
+                <div class="definition-box">
+                    <div class="definition-title">🤝 社會弱勢身分：</div>
+                    <ul>
+                        <li>特殊境遇家庭</li>
+                        <li>育有未成年子女二人以上</li>
+                        <li>於安置教養機構結束安置無法返家，未滿25歲</li>
+                        <li>65歲以上之老人</li>
+                        <li>受家庭暴力或性侵害之受害者及其子女</li>
+                        <li>身心障礙者</li>
+                        <li>感染愛滋病毒者</li>
+                        <li>原住民</li>
+                        <li>災民、遊民</li>
+                        <li>因懷孕或生育而遭遇困境之未成年人</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="step-section">
+                <div class="step-title">
+                    <div class="step-number">3</div>
+                    判斷補貼級距
+                </div>
+                
+                <table class="level-table">
+                    <thead>
+                        <tr>
+                            <th>級距</th>
+                            <th>條件</th>
+                            <th>說明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="level-1">
+                            <td><strong>第一級</strong><br>（補貼最高）</td>
+                            <td>
+                                1. 家庭成員2人以上 + 低收入戶<br>
+                                <strong>或</strong><br>
+                                2. 家庭成員3人以上 + 中低收入戶
+                            </td>
+                            <td>最優先照顧對象</td>
+                        </tr>
+                        <tr class="level-2">
+                            <td><strong>第二級</strong><br>（中等補貼）</td>
+                            <td>非第一級及第三級條件者</td>
+                            <td>一般家庭</td>
+                        </tr>
+                        <tr class="level-3">
+                            <td><strong>第三級</strong><br>（基本補貼）</td>
+                            <td>
+                                1. 家庭成員1人（單身）<br>
+                                <strong>且</strong><br>
+                                2. 未滿40歲<br>
+                                <strong>且</strong><br>
+                                3. 未具經濟或社會弱勢身分
+                            </td>
+                            <td>單身青年</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="step-section">
+                <div class="step-title">
+                    <div class="step-number">4</div>
+                    新北市各區補貼金額
+                </div>
+                
+                <table class="location-table">
+                    <thead>
+                        <tr>
+                            <th>行政區</th>
+                            <th>第一級</th>
+                            <th>第二級</th>
+                            <th>第三級</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="city-name">三重、土城、中和、永和、汐止、板橋、新店、新莊、蘆洲、八里、三峽、五股、林口、泰山、淡水、深坑、樹林、鶯歌區</td>
+                            <td class="price-highlight">5,000元</td>
+                            <td class="price-highlight">4,000元</td>
+                            <td class="price-highlight">2,400元</td>
+                        </tr>
+                        <tr>
+                            <td class="city-name">三芝、平溪、石門、石碇、坪林、金山、烏來、貢寮、瑞芳、萬里、雙溪區</td>
+                            <td class="price-highlight">3,600元</td>
+                            <td class="price-highlight">3,200元</td>
+                            <td class="price-highlight">2,000元</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="example-box">
+                    <div class="example-title">💡 查詢範例：</div>
+                    <p><strong>租屋處在新北市板橋區</strong></p>
+                    <p>1. 板橋區屬於第一組（高補貼區）</p>
+                    <p>2. 補貼金額：第1級5,000元 / 第2級4,000元 / 第3級2,400元</p>
+                </div>
+            </div>
+            
+            <div class="step-section">
+                <div class="step-title">
+                    <div class="step-number">5</div>
+                    加碼補貼計算
+                </div>
+                
+                <div class="important-note">
+                    <h4>⚠️ 重要說明</h4>
+                    <p>如果同時符合多種加碼身分，<strong>補貼金額擇高補貼</strong>（不累加）</p>
+                </div>
+                
+                <table class="bonus-table">
+                    <thead>
+                        <tr>
+                            <th>加碼對象</th>
+                            <th>條件</th>
+                            <th>加碼倍數</th>
+                            <th>說明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>單身青年</strong></td>
+                            <td>成年未達40歲單身</td>
+                            <td><strong>1.2倍</strong></td>
+                            <td>基本金額 × 1.2</td>
+                        </tr>
+                        <tr>
+                            <td><strong>新婚家庭</strong></td>
+                            <td>結婚2年內</td>
+                            <td><strong>1.3倍</strong></td>
+                            <td>基本金額 × 1.3</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4"><strong>育有未成年子女家庭</strong></td>
+                            <td>1人</td>
+                            <td><strong>1.4倍</strong></td>
+                            <td rowspan="4">基本金額 × 倍數<br>每增加一名子女<br>倍數增加0.2</td>
+                        </tr>
+                        <tr>
+                            <td>2人</td>
+                            <td><strong>1.6倍</strong></td>
+                        </tr>
+                        <tr>
+                            <td>3人</td>
+                            <td><strong>1.8倍</strong></td>
+                        </tr>
+                        <tr>
+                            <td>4人以上</td>
+                            <td><strong>依此類推</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>經濟弱勢</strong></td>
+                            <td>低收入戶、中低收入戶</td>
+                            <td><strong>1.4倍</strong></td>
+                            <td>基本金額 × 1.4</td>
+                        </tr>
+                        <tr>
+                            <td><strong>社會弱勢</strong></td>
+                            <td>如上述社會弱勢身分</td>
+                            <td><strong>1.2倍</strong></td>
+                            <td>基本金額 × 1.2</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="example-box">
+                    <div class="example-title">💡 加碼計算範例：</div>
+                    <p><strong>新北市板橋區，育有2名未成年子女的家庭（第二級）</strong></p>
+                    <p>1. 基本金額：4,000元（第二級）</p>
+                    <p>2. 加碼倍數：1.6倍（育有2名未成年子女）</p>
+                    <p>3. 實際補貼：4,000元 × 1.6 = <span class="price-highlight">6,400元</span></p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="faq" class="tab-content">
+            <div class="faq-section">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        1. 誰可以申請租金補貼？
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>申請條件：</strong></p>
+                        <ul>
+                            <li>中華民國國民</li>
+                            <li>年滿20歲（或18歲以上已婚者）</li>
+                            <li>在新北市設籍、就學或就業</li>
+                            <li>具居住需求者</li>
+                        </ul>
+                        <p><strong>✅ 不限弱勢族群，一般民眾皆可申請！</strong></p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        2. 可以有自有房產嗎？
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>❌ 不可以！</strong></p>
+                        <p>申請人及其家庭成員在以下地區都不能持有自有住宅：</p>
+                        <ul>
+                            <li>新北市</li>
+                            <li>台北市</li>
+                            <li>桃園市</li>
+                            <li>基隆市</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        3. 所得有限制嗎？
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>有限制！需符合以下兩個條件：</strong></p>
+                        <ul>
+                            <li><strong>家庭人均月所得：</strong>不得超過「最低生活費 × 3.5倍」<br>
+                                112年度標準為每人每月 <span class="price-highlight">5萬6000元</span></li>
+                            <li><strong>整體家庭年所得：</strong>需落在新北市公告標準以內<br>
+                                約 <span class="price-highlight">127–133萬元以下</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        4. 財產需要限制嗎？
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>是的，財產也有上限：</strong></p>
+                        <ul>
+                            <li><strong>動產上限：</strong>約 <span class="price-highlight">403萬元</span><br>
+                                （現金、存款、股票等）</li>
+                            <li><strong>不動產上限：</strong>約 <span class="price-highlight">600萬元</span><br>
+                                （房產、土地等總額）</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        5. 如果在其他縣市有租補或社宅資格怎麼辦？
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>需要先退出！</strong></p>
+                        <p>若現已承租公共住宅、社會住宅或領取租金補貼，需在簽約前：</p>
+                        <ul>
+                            <li>放棄退租</li>
+                            <li>或取消補貼</li>
+                        </ul>
+                        <p>才可申請本計畫。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        6. 租金是多少？有折扣嗎？
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>有兩種方案：</strong></p>
+                        <ul>
+                            <li><strong>包租方案：</strong>業者向房東承租後轉租租客<br>
+                                一般戶享市場租金 <span class="price-highlight">8折</span></li>
+                            <li><strong>代租方案：</strong>房客直接與房東簽約，業者協助管理<br>
+                                一般戶為市場租金 <span class="price-highlight">9折</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        7. 租期、押金、水電怎麼安排？
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>租期安排：</strong></p>
+                        <ul>
+                            <li>通常一年簽約一次</li>
+                            <li>最多可續約至3年</li>
+                        </ul>
+                        <p><strong>費用安排：</strong></p>
+                        <ul>
+                            <li><strong>押金：</strong>一般按2個月租金收取</li>
+                            <li><strong>水電雜費：</strong>由租客負擔（市區慣例）</li>
+                        </ul>
+                        <p><strong>※ 實際數字依各業者及房東契約而異</strong></p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        8. 有哪些保障與補助？
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>🏠 公證費補助：</strong></p>
+                        <ul>
+                            <li>租約可辦理公證</li>
+                            <li>一般戶不補助，但弱勢戶可由政府補助</li>
+                            <li>雙北每件最高補助 <span class="price-highlight">4,500元</span></li>
+                        </ul>
+                        <p><strong>🔧 修繕／居家安全補助：</strong></p>
+                        <ul>
+                            <li>此為房東享用的福利</li>
+                        </ul>
+                        <p><strong>💰 租金補助：</strong></p>
+                        <ul>
+                            <li>僅針對弱勢戶</li>
+                            <li>一般戶不另享租金差額補貼</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-info">
+            <h3>📞 諮詢管道</h3>
+            <p><strong>內政部國土管理署住宅補貼諮詢專線：</strong></p>
+            <p>(02) 7729-8003</p>
+            <p>【專人接聽時間：週一至週五 上午8:00至下午6:00】</p>
+            <br>
+            <p><strong>或洽租屋所在地新北市政府受理單位</strong></p>
+            <br>
+            <p><strong>網站查詢：</strong></p>
+            <p>內政部國土管理署網站首頁 → 右側「重要政策」→「三百億元中央擴大租金補貼專區」</p>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            // 隱藏所有分頁內容
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // 移除所有分頁按鈕的active狀態
+            const tabButtons = document.querySelectorAll('.nav-tab');
+            tabButtons.forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            // 顯示選中的分頁內容
+            document.getElementById(tabName).classList.add('active');
+            
+            // 添加選中分頁按鈕的active狀態
+            event.target.classList.add('active');
+        }
+        
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const question = element;
+            
+            // 切換問題的active狀態
+            question.classList.toggle('active');
+            
+            // 切換答案的顯示狀態
+            answer.classList.toggle('active');
+        }
+        
+        function toggleCheckbox(element) {
+            const checkbox = element.querySelector('input[type="checkbox"]');
+            checkbox.checked = !checkbox.checked;
+            
+            if (checkbox.checked) {
+                element.classList.add('checked');
+            } else {
+                element.classList.remove('checked');
+            }
+        }
+        
+        function calculateSubsidy() {
+            // 獲取表單數據
+            const district = document.getElementById('district').value;
+            const familySize = parseInt(document.getElementById('familySize').value);
+            const applicantAge = parseInt(document.getElementById('applicantAge').value);
+            const childrenCount = parseInt(document.getElementById('childrenCount').value) || 0;
+            
+            // 檢查必填欄位
+            if (!district || !familySize || !applicantAge) {
+                alert('請填寫所有必填欄位（標示 * 的欄位）');
+                return;
+            }
+            
+            // 獲取勾選的身分
+            const lowIncome = document.getElementById('lowIncome').checked;
+            const midLowIncome = document.getElementById('midLowIncome').checked;
+            const socialWeak = document.querySelectorAll('.checkbox-group:nth-of-type(2) input[type="checkbox"]:checked').length > 0;
+            const singleYouth = document.getElementById('singleYouth').checked;
+            const newMarried = document.getElementById('newMarried').checked;
+            
+            // 判斷補貼級距
+            let level = '';
+            let baseAmount = 0;
+            
+            // 設定基本金額（根據行政區）
+            const amounts = {
+                'group1': { level1: 5000, level2: 4000, level3: 2400 },
+                'group2': { level1: 3600, level2: 3200, level3: 2000 }
+            };
+            
+            // 判斷級距
+            if ((familySize >= 2 && lowIncome) || (familySize >= 3 && midLowIncome)) {
+                level = '第一級';
+                baseAmount = amounts[district].level1;
+            } else if (familySize === 1 && applicantAge < 40 && !lowIncome && !midLowIncome && !socialWeak) {
+                level = '第三級';
+                baseAmount = amounts[district].level3;
+            } else {
+                level = '第二級';
+                baseAmount = amounts[district].level2;
+            }
+            
+            // 計算加碼倍數
+            let multiplier = 1.0;
+            let reasons = [];
+            
+            // 育有未成年子女加碼
+            if (childrenCount > 0) {
+                const childMultiplier = 1.2 + (childrenCount * 0.2);
+                if (childMultiplier > multiplier) {
+                    multiplier = childMultiplier;
+                    reasons = [`育有${childrenCount}名未成年子女`];
+                }
+            }
+            
+            // 經濟弱勢加碼
+            if (lowIncome || midLowIncome) {
+                if (1.4 > multiplier) {
+                    multiplier = 1.4;
+                    reasons = ['經濟弱勢'];
+                }
+            }
+            
+            // 新婚家庭加碼
+            if (newMarried && 1.3 > multiplier) {
+                multiplier = 1.3;
+                reasons = ['新婚家庭'];
+            }
+            
+            // 單身青年或社會弱勢加碼
+            if ((singleYouth || socialWeak) && 1.2 > multiplier) {
+                multiplier = 1.2;
+                reasons = singleYouth ? ['單身青年'] : ['社會弱勢'];
+            }
+            
+            // 計算最終金額
+            const finalAmount = Math.round(baseAmount * multiplier);
+            
+            // 顯示結果
+            document.getElementById('resultAmount').textContent = finalAmount.toLocaleString() + ' 元';
+            document.getElementById('resultLevel').textContent = level;
+            document.getElementById('resultBase').textContent = baseAmount.toLocaleString() + ' 元';
+            document.getElementById('resultMultiplier').textContent = multiplier.toFixed(1) + ' 倍';
+            document.getElementById('resultReason').textContent = reasons.length > 0 ? reasons.join('、') : '無加碼';
+            
+            // 顯示結果區塊
+            document.getElementById('result').classList.add('show');
+            
+            // 滾動到結果區塊
+            document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
